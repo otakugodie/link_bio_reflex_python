@@ -1,15 +1,31 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
-
 import reflex as rx
+from link_bio.components.navbar import navbar
+from link_bio.views.header.header import header
+from link_bio.views.links.links import links
 
-from rxconfig import config
-
-
+# from rxconfig import config
 class State(rx.State):
-    """The app state."""
+    pass
 
+def index() -> rx.Component:
+    #return rx.text('Hi Reflex', color='blue')
+    return rx.vstack(
+        navbar(),
+        header(),
+        links()
+        
+    )
+
+
+app = rx.App()
+app.add_page(index)
+app._compile()
+
+
+
+"""
+class State(rx.State):
     ...
-
 
 def index() -> rx.Component:
     # Welcome Page (Index)
@@ -37,3 +53,4 @@ def index() -> rx.Component:
 
 app = rx.App()
 app.add_page(index)
+"""
