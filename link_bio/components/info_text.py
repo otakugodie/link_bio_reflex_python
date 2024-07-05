@@ -8,5 +8,5 @@ def info_text(title: str, body: str) -> rx.Component:
             as_='span',
             color_scheme='ruby'
         ),
-        f" {body}"
+        f" {body}", font_size=Size.MEDIUM.value
     )

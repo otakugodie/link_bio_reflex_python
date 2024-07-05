@@ -25,8 +25,9 @@ def header() -> rx.Component:
                         link_icon('https://x.com/otakugodie'),
                         link_icon('https://www.linkedin.com/in/diegorodriguezc')
                     ),
-                    align_items='start'
-                )
+                    align_items='start',
+                ),
+                spacing='5'
             ),
 
             rx.flex(
